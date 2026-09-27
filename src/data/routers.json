@@ -1,0 +1,34 @@
+[
+  {
+    "id": "rtr-001",
+    "hostname": "core-router-1",
+    "ip_address": "10.0.0.1",
+    "vendor": "Cisco",
+    "location": "Bucharest DC1",
+    "status": "online"
+  },
+  {
+    "id": "rtr-002",
+    "hostname": "core-router-2",
+    "ip_address": "10.0.0.2",
+    "vendor": "Juniper",
+    "location": "Bucharest DC1",
+    "status": "online"
+  },
+  {
+    "id": "rtr-003",
+    "hostname": "edge-router-1",
+    "ip_address": "10.0.1.1",
+    "vendor": "MikroTik",
+    "location": "Cluj DC2",
+    "status": "degraded"
+  },
+  {
+    "id": "rtr-004",
+    "hostname": "edge-router-2",
+    "ip_address": "10.0.1.2",
+    "vendor": "Cisco",
+    "location": "Cluj DC2",
+    "status": "offline"
+  }
+]
