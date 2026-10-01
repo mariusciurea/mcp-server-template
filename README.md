@@ -1,5 +1,8 @@
 # MCP Router Template
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/mariusciurea/mcp-server-template)](https://m8ven.ai/mcp/mariusciurea/mcp-server-template)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A professional Python MCP server template built with **FastAPI** and
 **fastapi-mcp**. It exposes 3 dummy tools for managing network routers,
 protected with JWT authentication and rate limiting. There is no database —
@@ -44,6 +47,18 @@ uvicorn src.service:app --reload
 
 The server starts on `http://127.0.0.1:8000`. Interactive API docs are at
 `/docs`, and the MCP server is mounted at `/mcp` (Streamable HTTP transport).
+
+## Tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+Each tool is tested at three levels: the plain Python function, the REST
+endpoint (including auth and error codes), and an MCP `tools/call` over the
+`/mcp` transport. Tests use their own settings and a temporary router
+inventory, so they don't need a `.env` file and don't read `src/data`.
 
 ## Authentication
 
@@ -112,3 +127,7 @@ See [.env.example](.env.example) for all available variables
   explicit `operation_id` added to `include_operations`.
 - To connect to real routers (SSH/NETCONF), replace the dummy logic in
   `tools/send_command.py` without changing the rest of the app.
+
+## License
+
+Released under the [MIT License](LICENSE).
